@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "solidity-code-metrics": "^0.0.27"
+    "ethers": "^6.12.1",
+    "solidity-code-metrics": "^0.0.27",
+    "solidity-coverage": "^0.8.12"
   }
 }

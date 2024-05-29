@@ -4,6 +4,7 @@ import "@nomicfoundation/hardhat-foundry";
 import dotenv from "dotenv";
 dotenv.config();
 
+
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.24",
@@ -26,12 +27,12 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
-      arbitrumSepolia: process.env.ARB_API_KEY || "",
-    },
-  },
+      arbitrumSepolia: process.env.ARB_API_KEY || "", 
+    }
+},
   sourcify: {
-    enabled: true,
-  },
+    enabled: true
+  }
 };
 
 export default config;

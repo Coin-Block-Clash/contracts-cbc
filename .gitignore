@@ -25,3 +25,6 @@ cache_forge
 # Json files
 out
 
+/lib
+
+deployments/localhost
