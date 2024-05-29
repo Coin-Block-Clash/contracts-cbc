@@ -13,17 +13,15 @@
 #### Deploy Contracts
 
 ```shell
-npx hardhat run --network <network> path/to/the/script
+npx hardhat run --network arbitrumSepolia path/to/the/script
 
-npx hardhat run --network arbitrumSepolia  script/hardhatScripts/deploy/deployToken.ts
 ```
 
 #### Verify Contracts
 
 ```shell
-npx hardhat verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+npx hardhat verify --network arbitrumSepolia DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
 
- npx hardhat verify --network arbitrumSepolia  
 ```
 
 ----------------------------------------------------------------------------------------
@@ -32,8 +30,17 @@ npx hardhat verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argu
 
 #### Step 1
 
+
 ```shell
-cd lib git clone https://github.com/foundry-rs/forge-std.git
+mkdir lib 
+```
+
+```shell
+cd lib 
+```
+
+```shell
+git clone https://github.com/foundry-rs/forge-std.git
 ```
 
 #### Step 2

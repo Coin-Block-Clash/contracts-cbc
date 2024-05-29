@@ -1,5 +1,7 @@
 node_modules
 .env
+lib
+
 
 # Hardhat files
 /cache
@@ -20,5 +22,6 @@ ignition/deployments/chain-31337
 # Forge remove
 cache_forge
 
-
+# Json files
 out
+
