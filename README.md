@@ -1,66 +1,71 @@
-## Foundry
+# Coin Block Clash 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+ - [Coin Block Clash]()
 
-Foundry consists of:
+ - `Pool` Contracts
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+------------------------------------------------------------------------------------------
 
-## Documentation
+# Install dep for Hardhat and run 
 
-https://book.getfoundry.sh/
+- `npm i`
 
-## Usage
-
-### Build
+#### Deploy Contracts
 
 ```shell
-$ forge build
+npx hardhat run --network <network> path/to/the/script
+
+npx hardhat run --network arbitrumSepolia  script/hardhatScripts/deploy/deployToken.ts
 ```
 
-### Test
+#### Verify Contracts
 
 ```shell
-$ forge test
+npx hardhat verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+
+ npx hardhat verify --network arbitrumSepolia  
 ```
 
-### Format
+----------------------------------------------------------------------------------------
+
+# Install dep for Foundry and run 
+
+#### Step 1
 
 ```shell
-$ forge fmt
+cd lib git clone https://github.com/foundry-rs/forge-std.git
 ```
 
-### Gas Snapshots
+#### Step 2
 
 ```shell
-$ forge snapshot
+forge build
 ```
 
-### Anvil
+#### To Test Contract
 
 ```shell
-$ anvil
+forge test
 ```
 
-### Deploy
+#### To Deploy and Verify 
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+forge create --rpc-url <RPC> \
+    --private-key <KEY> \
+    --etherscan-api-key <API> \
+    --verify \
+    contracts/contract.sol:contractNAME
 ```
 
-### Cast
+#### To Deploy and Verify with constructor args
 
 ```shell
-$ cast <subcommand>
+    forge create --rpc-url <RPC> \
+    --constructor-args "--" "--" 00 00 \
+    --private-key <KEY> \
+    --etherscan-api-key <API> \
+    --verify \
+    contracts/contract.sol:contractNAME
 ```
 
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
