@@ -20,8 +20,7 @@ npx hardhat run --network arbitrumSepolia path/to/the/script
 #### Verify Contracts
 
 ```shell
-npx hardhat verify --network arbitrumSepolia DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
-
+npx hardhat verify --network arbitrumSepolia DEPLOYED_CONTRACT_ADDRESS 
 ```
 
 ----------------------------------------------------------------------------------------
